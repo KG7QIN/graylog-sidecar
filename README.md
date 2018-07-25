@@ -9,6 +9,14 @@ Sidecar and collectors write log to `/var/log/graylog/collector-sidecar` with
 default daily rotation and retention time of 7 days. By default, log directory
 is inside the container. Add appropriate volume mount to store logs in host.
 
+## Build
+
+<pre>
+git clone https://github.com/KG7QIN/graylog-sidecar.git
+cd graylog-sidecar
+docker build -t kg7qin/graylog-sidecar .
+</pre>
+
 ## Usage
 
 The container uses environment variables to define the logfiles that are monitored and connection settings to the server running Graylog. Following parameters are available:

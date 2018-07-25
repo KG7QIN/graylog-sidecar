@@ -1,6 +1,7 @@
-# Graylog Sidecar
+# Graylog Sidecar Collector
 Docker image for Graylog Sidecar Collector using filebeat
-NOTE:  This has been updated to use Graylog Sidecar Collector 0.1.6
+
+#### NOTE:  This has been updated to use Graylog Sidecar Collector 0.1.6
 
 ## Sidecar and collector logging
 
@@ -34,12 +35,12 @@ The container uses environment variables to define the logfiles that are monitor
 
 Also, the monitored folder needs to be mounted for the docker container. E.g. if you want to monitor host location /var/log/apache2, you should mount it as follows:
 
-`docker run --env-file ./env.list -v /var/log/apache2:/host/var/log/apache2:ro -d digiapulssi/graylog-sidecar`
+`docker run --env-file ./env.list -v /var/log/apache2:/host/var/log/apache2:ro -d kg7qin/graylog-sidecar`
 
 Example env.list configuration:
 ```
 GS_SERVER_URL=http://graylog2:9000/api/
-GS_NODE_ID=apache-servery
+GS_NODE_ID=apache-server
 GS_TAGS=['apache2']
 ```
 
